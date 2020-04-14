@@ -17,3 +17,9 @@ Route::post('/post-act', 'ActividadController@store');
 Route::get('/editar/{id}', 'ActividadController@editar');
 Route::post('/editar/{id}', 'ActividadController@update');
 Route::delete('/borrar/{id}', 'ActividadController@destroy');
+/*
+Route::group(['prefix' => 'laravel-filemanager'], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
+*/

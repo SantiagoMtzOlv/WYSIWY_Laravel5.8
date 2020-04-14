@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <script src="/js/app.js"></script>
     <script src="/ckeditor/ckeditor.js"></script>
+    <script src="/ckfinder/ckfinder.js"></script>
 </head>
 <body>
     <header>
@@ -51,9 +52,10 @@
           </form>
     </section>
     <script>
-        // Replace the <textarea id="editor1"> with a CKEditor
-        // instance, using default configuration.
-        CKEDITOR.replace( 'contenido' );
+        CKEDITOR.replace( 'contenido', {
+            filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+            filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+        } );
     </script>
 </body>
 </html>
